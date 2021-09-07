@@ -1,0 +1,21 @@
+/* 文本省略号的mixin */
+@mixin ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* flex横向布局 */
+@mixin flex-row {
+    display: flex;
+}
+/* flex竖向排列 */
+@mixin flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+/* flex水平垂直居中 */
+@mixin vh-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

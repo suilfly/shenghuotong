@@ -1,0 +1,14 @@
+html{
+    background-color: #ededed;
+    font-size: .12rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.scroll-wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+}
