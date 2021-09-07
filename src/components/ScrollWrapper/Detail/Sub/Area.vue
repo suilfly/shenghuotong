@@ -1,6 +1,6 @@
 <template>
   <div class="area">
-      <span class="iconfont icon-area"></span>
+      <span class="iconfont icon-weizhi"></span>
       <span class="area-text">{{area}}</span>
   </div>
 </template>
@@ -28,7 +28,7 @@ props:{
     background-color:#fff ;
     border-bottom:1px solid #ddd;
     box-sizing: border-box;
-    .icon-area{
+    .icon-weizhi{
         font-size: .18rem;
        /*  margin-right: .1rem; */
         color: #999;

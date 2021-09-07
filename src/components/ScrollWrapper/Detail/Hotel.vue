@@ -4,8 +4,7 @@
     <detail-stars :starNum="starNum" :score="score"></detail-stars>
     <detail-area :area="area"></detail-area>
     <detail-price :price="price"></detail-price>
-    <detail-title-index :title="title" :service="service"></detail-title-index>
-    <detail-keyword-index :keywordList="keywordList"></detail-keyword-index>
+    <detail-service :service="service"></detail-service>
   </div>
 </template>
 
@@ -16,7 +15,7 @@ import DetailArea from "./Sub/Area.vue";
 import DetailPrice from "./Sub/Price.vue";
 import DetailOpenDateTime from "./Sub/DateTime.vue";
 import DetailTitleIndex from "./Sub/TitleIndex.vue";
-import DetailKeywordIndex from "./Sub/KeywordIndex.vue";
+import DetailService from "./Sub/ServiceIndex.vue";
 export default {
   name: "HotelDetail",
   components: {
@@ -26,7 +25,7 @@ export default {
     DetailPrice,
     DetailOpenDateTime,
     DetailTitleIndex,
-    DetailKeywordIndex
+    DetailService
   },
   props: {
     name: String,

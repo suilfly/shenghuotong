@@ -1,6 +1,6 @@
 <template>
   <div class="tip-bd">
-      <span class="icon-tip"></span>
+      <span class="iconfont icon-jihua"></span>
       <span class="tip-text">{{tipText}}</span>
   </div>
 </template>
@@ -24,9 +24,10 @@ props:{
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
-    .icon-tip{
+    .icon-jihua{
         font-size: .18rem;
-        color: #000;
+        color: #999;
+        line-height: .44rem;
     }
     .tip-text{
         font-size:.14rem;

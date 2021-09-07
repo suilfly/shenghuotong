@@ -42,7 +42,7 @@
         :area="detailData.address"
         :price="detailData.default_price"
         :openDateTime="detailData.open_datetime"
-        :recom="detailData.recom"
+        :service="detailData.service"
         :keywordList="detailData.comment_keyword"
       ></ktv-detail>
       <massage-detail
@@ -53,7 +53,7 @@
         :area="detailData.address"
         :price="detailData.default_price"
         :openDateTime="detailData.open_datetime"
-        :recom="detailData.recom"
+        :service="detailData.service"
         :keywordList="detailData.comment_keyword"
       ></massage-detail>
     </div>

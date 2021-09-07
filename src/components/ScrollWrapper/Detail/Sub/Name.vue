@@ -30,6 +30,7 @@ props:{
     .icon-name{
         font-size: .18rem;
         color: #000;
+        line-height: .44rem;
     }
     .name-text{
         font-size:.14rem;

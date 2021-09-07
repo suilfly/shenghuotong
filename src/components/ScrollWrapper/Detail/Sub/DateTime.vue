@@ -1,6 +1,6 @@
 <template>
   <div class="date-time-bd">
-    <span class="iconfont icon-date-time"></span>
+    <span class="iconfont icon-riqidianji"></span>
     <span class="date-time-open">{{ openDateTime }}</span>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   box-sizing: border-box;
-  .icon-date-time {
+  .icon-riqidianji {
     font-size: 0.18rem;
     /*  margin-right: .1rem; */
     color: #999;

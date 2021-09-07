@@ -52,9 +52,15 @@ export default {
     height: 0.4rem;
     color: #fff;
     border-radius: 50%;
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
     .iconfont {
       color: #fff;
-      font-size: 0.26rem;
+      font-size: 0.20rem;
+      line-height: .4rem;
+      text-align: center;
+      
     }
   }
   .icon-text {

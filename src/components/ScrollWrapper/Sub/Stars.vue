@@ -21,6 +21,7 @@ export default {
 @import '~styles/variable.scss';
 .stars-wrapper{
     color: #ccc;
+    width: .4rem;
     .active{
         color: $starColor;
     }

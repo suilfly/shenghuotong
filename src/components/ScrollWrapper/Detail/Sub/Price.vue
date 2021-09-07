@@ -1,6 +1,6 @@
 <template>
   <div class="price-bd">
-      <span class="iconfont icon-price">
+      <span class="iconfont icon-money">
 
       </span>
       <span class="price-text">￥{{price}}元起</span>
@@ -31,9 +31,9 @@ props:{
     align-items: center;
     padding: 0 .15rem;
     border-bottom: 1px solid #ddd;
-    .icon-price{
+    .icon-money{
         font-size: .14rem;
-        color: #000;
+        color: #999;
     }
     .price-text{
         color: #d35400;
