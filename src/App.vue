@@ -14,9 +14,5 @@ export default {
 </script>
 
 <style>
-html,
-body,
-.container,
-#app {
-}
 </style>
+ 

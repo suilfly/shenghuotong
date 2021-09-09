@@ -1,6 +1,6 @@
 <template>
-  <div class="scroll-wrapper" ref="wrapper">
-      <div class="scroll-content">
+  <div class="wrapper" ref="wrapper">
+      <div class="content">
           <!-- 滚动的内容 -->
         <current-city></current-city>
         <city-list></city-list>
@@ -20,7 +20,9 @@ components:{
     CityList
 },
 mounted(){
-    this.scroll = new BetterScroll(this.$refs.wrapper);
+    this.$nextTick(()=>{
+        this.scroll = new BetterScroll(this.$refs.wrapper,{click:true});
+    });
 },
 data(){
   return{
@@ -31,5 +33,7 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-
+.wrapper{
+  height: 90vh;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="scroll-wrapper" ref="wrapper">
-    <div class="scroll-content">
+  <div class="wrapper" ref="wrapper">
+      <div class="content">
       <error :errorShow="isError"></error>
       <div v-show="!isError">
         <list-city-selector :cityId="cityId"></list-city-selector>
@@ -70,7 +70,7 @@ export default {
     } */
   },
   mounted() {
-    this.scroll = new BetterScroll(this.$refs.wrapper);
+    this.scroll = new BetterScroll(this.$refs.wrapper,{click:true});
     console.log(this.field, this.cityId);
     this.getListDatas(this.cityId, this.field);
   },
@@ -79,6 +79,8 @@ export default {
   },
   methods: {
     getListDatas(cityId, field) {
+      // 用listdata做缓存，保证点击相同的选项不会再次请求
+
       if (!this.listDatas[cityId]) {
         const listModule = new ListModule();
         //     this.listDatas = [];
@@ -100,7 +102,8 @@ export default {
           }
         });
       } else {
-        this.loadingShow = true;
+        // 有缓存
+        this.loadingShow = false;
       }
     }
   },
@@ -112,4 +115,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrapper{
+  height: 90vh;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="scroll-wrapper" ref="wrapper">
-      <div class="scroll-content">
+  <div class="wrapper" ref="wrapper">
+      <div class="content">
           <no-data-tip v-show="isNoDataShow"></no-data-tip>
           <error :errorShow="isError"></error>
           <div v-if="data.viewDatas && data.viewDatas.length > 0">
@@ -72,11 +72,16 @@ props:{
     }
 },
 mounted(){
-this.scroll = new BetterScroll(this.$refs.wrapper);
+    this.$nextTick(()=>{
+        this.scroll = new BetterScroll(this.$refs.wrapper,{click:true});
+    });
+
 }
 }
 </script>
 
 <style lang="scss" scoped>
-
+.wrapper{
+  height: 90vh;
+}
 </style>

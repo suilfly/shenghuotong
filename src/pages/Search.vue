@@ -31,7 +31,10 @@ methods:{
       this.data = data;console.log(data)
     }else{
       this.data = res;
-      this.isError = true;
+      if(res.status === -1){
+        this.isError = true;
+      }
+      
     }
   }
 },

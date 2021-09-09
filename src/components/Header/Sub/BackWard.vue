@@ -1,6 +1,6 @@
 <template>
   <div class="back-ward" @click="onRouterBack">
-      <span class="iconfont icon-header-arrow-left"><</span>
+      <span class="iconfont icon-back"></span>
   </div>
 </template>
 

@@ -35,6 +35,6 @@ export default {
   flex-wrap: wrap;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  margin-top:$headerHeight ;
+  /* margin-top:$headerHeight ; */
 }
 </style>

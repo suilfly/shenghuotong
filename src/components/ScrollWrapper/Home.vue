@@ -1,6 +1,6 @@
 <template>
-  <div class="scroll-wrapper" ref="wrapper">
-    <div class="scroll-content">
+  <div class="wrapper" ref="wrapper">
+      <div class="content">
       <!-- 滚动的内容 -->
       <category-icons></category-icons>
       <div class="scroll-list" v-show="!isError">
@@ -58,7 +58,7 @@ export default {
   },
   mounted() {
    // console.log(111)
-    this.scroll = new BetterScroll(this.$refs.wrapper);
+
     this.getHomeDatas(this.cityId); // 获取首页的城市数据
   },
   methods: {
@@ -91,7 +91,9 @@ export default {
         err => {
           vm.isError = true;
         }
-      );
+      ).then(()=>{
+        this.scroll = new BetterScroll(this.$refs.wrapper,{click:true});
+      });
     }
   },
   data() {
@@ -117,4 +119,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '~styles/variable.scss';
+.wrapper{
+  height: 90vh;
+  margin-top: $headerHeight;
+  box-sizing: border-box;
+}
+</style>

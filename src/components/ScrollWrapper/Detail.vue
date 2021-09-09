@@ -1,6 +1,6 @@
 <template>
-  <div class="scroll-wrapper" ref="wrapper">
-    <div class="scroll-content">
+  <div class="wrapper" ref="wrapper">
+      <div class="content">
       <detail-swiper :picDatas="detailData.pics"></detail-swiper>
       <view-detail
         v-if="field === 'view'"
@@ -95,8 +95,11 @@ export default {
           // 服务
           data.service && (data.service = tools.JSONtoArray(data.service));
           this.detailData = data;
-          console.log(this.detailData);
+         //  console.log(this.detailData);
+
         }
+      }).then(()=>{
+        this.scroll = new BetterScroll(this.$refs.wrapper,{click:true});
       });
     }
   },
@@ -108,7 +111,7 @@ export default {
     };
   },
   mounted() {
-    this.scroll = new BetterScroll(this.$refs.wrapper);
+    
     this.field = this.$route.query.field;
     this.id = this.$route.query.id;
     this.getDetail(this.field, this.id);
@@ -116,4 +119,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.wrapper{
+  height: 90vh;
+}
+</style>
